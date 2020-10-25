@@ -3,31 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/standard_margin"
+    android:layout_marginTop="?actionBarSize"
+    android:layout_marginEnd="@dimen/standard_margin"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:id="@+id/instructions"
-        style="@style/default_style"
-        android:layout_marginTop="100dp"
-        android:fontFamily="casual"
-        android:gravity="center"
-        android:text="@string/instructions" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner"
+            android:padding="@dimen/standard_margin"
+            android:layout_margin="@dimen/slim_margin">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/instructions"
+                style="@style/default_style"
+
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="@string/instructions" />
 
 
-    <EditText
-        android:id="@+id/enter_text"
-        style="@style/default_style"
-        android:ems="15"
-        android:fontFamily="casual" />
+            <EditText
+                android:id="@+id/enter_text"
+                style="@style/default_style"
+                android:ems="15"
+                android:fontFamily="casual" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <TextView
-        android:id="@+id/copy"
-        style="@style/default_style"
-        android:layout_gravity="center"
-        android:fontFamily="casual"
-        android:gravity="center"
-        android:text="@string/name_text" />
+
+
+
+        <TextView
+            android:id="@+id/copy"
+            style="@style/default_style"
+            android:padding="@dimen/standard_margin"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/slim_margin"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="@string/name_text" />
 
 </LinearLayout>

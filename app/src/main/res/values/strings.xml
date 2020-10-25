@@ -4,4 +4,5 @@
     <string name="instructions">Please enter in text and then press the button</string>
     <string name="name_text">"Ahuva's attempt at the echo app homework"</string>
     <string name="copy">Copy</string>
+    <string name="save">save</string>
 </resources>

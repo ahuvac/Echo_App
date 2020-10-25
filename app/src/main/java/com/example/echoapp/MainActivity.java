@@ -1,10 +1,9 @@
-package com.mintedtech.echoapp;
+package com.example.echoapp;
 
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,20 +17,23 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private TextView txtvw;
+    private EditText edttxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        txtvw = findViewById(R.id.copy);
+        edttxt = findViewById(R.id.enter_text);
 
         ExtendedFloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView txtvw = (TextView)findViewById(R.id.copy);
-                EditText edttxt = (EditText)findViewById(R.id.enter_text);
-                txtvw.setText(edttxt.getText());
+                txtvw.setText(edttxt.getText().toString());
             }
         });
     }
